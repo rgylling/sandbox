@@ -1,0 +1,12 @@
+[
+  {
+    "foo":"bar",
+    "bar":"baz",
+    "baz":"end"
+  },
+  {
+    "name":"David",
+    "type":"web designer",
+    "age":42
+  }
+]

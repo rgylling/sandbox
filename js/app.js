@@ -1,13 +1,17 @@
+var xhr = new XMLHttpRequest();
 
 
-var data=[];
+xhr.onreadystatechange = function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    var arr = JSON.parse(xhr.responseText);
+    showstuff(arr);
+  }
+}
+xhr.open ("GET","js/item.json", true);
+xhr.send();
 
-console.log(localStorage.getItem('data'));
-
-data.push('foo');
-data.push('bar');
-
-
-localStorage.setItem('data2',data);
-
-console.log(data);
+function showstuff(arr) {
+  arr.forEach(function (data) {
+    console.log(data);
+  })
+}
