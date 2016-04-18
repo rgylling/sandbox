@@ -1,19 +1,11 @@
-var xhr = new XMLHttpRequest();
 
-xhr.onreadystatechange = function () {
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    var arr = JSON.parse(xhr.responseText);
-    showstuff(arr);
-  }
-};
 
-$('input').on('click', function () {
-  xhr.open ('GET','js/item.json', true);
-  xhr.send();
-});
+$('input').on('click', snagData);
 
-function showstuff(arr) {
-  arr.forEach(function (data) {
-    console.log(data);
-  })
+function snagData() {
+  $.getJSON('js/item.json', displayData);
+}
+
+function displayData(data) {
+  console.log(data);
 }
