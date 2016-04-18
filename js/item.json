@@ -1,8 +1,8 @@
 [
   {
-    "foo":"bar",
-    "bar":"baz",
-    "baz":"end"
+    "name":"bar",
+    "type":"baz",
+    "age":"end"
   },
   {
     "name":"David",
