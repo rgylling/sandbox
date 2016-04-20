@@ -21,7 +21,7 @@ webDB.init = function() {
   // Open and init DB
   try {
     if (openDatabase) {
-      webDB.verbose(false);
+      webDB.verbose(true);
       webDB.connect('blogDB', 'Blog Database', 5*1024*1024);
     } else {
       console.log('Web Databases not supported.');

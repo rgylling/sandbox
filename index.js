@@ -63,4 +63,10 @@ function runDemo(my) {
     };
     webDB.insertRecord(entry);
   });
+
+  $but2.on('click', function(){
+    console.log('butt2 pressed');
+    var command = 'DELETE FROM articles WHERE author = "Something Useful"';
+    webDB.runSQLcmd(command);
+  });
 }
