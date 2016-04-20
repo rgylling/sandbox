@@ -69,4 +69,10 @@ function runDemo(my) {
     var command = 'DELETE FROM articles WHERE author = "Something Useful"';
     webDB.runSQLcmd(command);
   });
-}
+
+  $but3.on('click', function(){
+    console.log('butt3 pressed');
+    var command = 'CREATE TABLE publication (Articleid INT, magazine VARCHAR(50), year INT)';
+    webDB.runSQLcmd(command);
+  });
+};
