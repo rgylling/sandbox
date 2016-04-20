@@ -11,6 +11,7 @@ function runDemo(my) {
   var $but1 = $('#butt1');
   var $but2 = $('#butt2');
   var $but3 = $('#butt3');
+  var $but4 = $('#butt4');
 
   clearLog();
 
@@ -73,6 +74,12 @@ function runDemo(my) {
   $but3.on('click', function(){
     console.log('butt3 pressed');
     var command = 'CREATE TABLE publication (Articleid INT, magazine VARCHAR(50), year INT)';
+    webDB.runSQLcmd(command);
+  });
+
+  $but4.on('click', function(){
+    console.log('butt3 pressed');
+    var command = 'INSERT INTO publication VALUES (4, "High Times", 2016)';
     webDB.runSQLcmd(command);
   });
 };
