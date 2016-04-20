@@ -1,11 +1,16 @@
 $(runDemo(window)); // jQuery's "onDocReady"
 
+
+
 function runDemo(my) {
   // DOM elements
   var $cmd   = $('#cmd');
   var $dbOut = $('#dbOut');
   var $rmLog = $('#rmLog');
   var $loadingZone = $('#loadingZone');
+  var $but1 = $('#butt1');
+  var $but2 = $('#butt2');
+  var $but3 = $('#butt3');
 
   clearLog();
 
