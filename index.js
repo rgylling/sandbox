@@ -54,4 +54,13 @@ function runDemo(my) {
 
   // Check for semicolon on each textarea content change
   $cmd.on('input', my.checksemi);
+
+  $but1.on('click', function(){
+    var entry = {
+      author:'Something Useful',
+      title: 'This is our title',
+      body: 'Here is our body'
+    };
+    webDB.insertRecord(entry);
+  });
 }
