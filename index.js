@@ -1,11 +1,16 @@
 $(runDemo(window)); // jQuery's "onDocReady"
 
+
+
 function runDemo(my) {
   // DOM elements
   var $cmd   = $('#cmd');
   var $dbOut = $('#dbOut');
   var $rmLog = $('#rmLog');
   var $loadingZone = $('#loadingZone');
+  var $but1 = $('#butt1');
+  var $but2 = $('#butt2');
+  var $but3 = $('#butt3');
 
   clearLog();
 
@@ -49,4 +54,13 @@ function runDemo(my) {
 
   // Check for semicolon on each textarea content change
   $cmd.on('input', my.checksemi);
+
+  $but1.on('click', function(){
+    var entry = {
+      author:'Something Useful',
+      title: 'This is our title',
+      body: 'Here is our body'
+    };
+    webDB.insertRecord(entry);
+  });
 }
